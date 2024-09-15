@@ -2,25 +2,40 @@ import React from 'react';
 import './App.css';  // For CSS styling
 
 // Images
-import poptartsImage from './img/poptarts.jpeg';
+import poptarts from './img/poptarts.jpg';
+import bottledwater from './img/bottledwater.jpg';
+import granolabars from './img/granolabars.jpg';
+import orangejuice from './img/orangejuice.jpg';
+import frozenpeas from './img/frozenpeas.jpg';
+import rice from './img/rice.jpg';
+import tomatosoup from './img/tomatosoup.jpg';
+import pockysticks from './img/pockysticks.jpg';
+import instantnoodles from './img/instantnoodles.jpg';
+import almonds from './img/almonds.jpg';
+import frostedflakes from './img/frostedflakes.jpg';
+import pasta from './img/pasta.jpg';
+import salt from './img/salt.jpg';
+import dietpepsi from './img/dietpepsi.jpg';
 
-function Market() {
+
+function Market({ addToBasket }) {
   const items = [
-    { id: 1, name: 'Blueberry Poptarts', price: '$10.00', seller: 'Amina Farsi', distance: '0.6 miles', image: poptartsImage },
-    { id: 2, name: 'Bottled Water', price: 'FREE', seller: 'Kofi Osei', distance: '0.8 miles', image: poptartsImage },
-    { id: 3, name: 'Granola Bars', price: '$3.30', seller: 'Fatima Sayed', distance: '1.3 miles', image: poptartsImage },
-    { id: 4, name: 'Orange Juice', price: '$2.00', seller: 'Pavan Kunigiri', distance: '1.7 miles', image: poptartsImage },
-    { id: 5, name: 'Frozen Peas', price: '$1.99', seller: 'Santiago Torres', distance: '2.4 miles', image: poptartsImage },
-    { id: 7, name: 'Rice', price: 'FREE', seller: 'Kai Hoang', distance: '4.7 miles', image: poptartsImage },
-    { id: 8, name: 'Tomato Soup', price: '$3.65', seller: 'Luka Petrovic', distance: '6.6 miles', image: poptartsImage },
-    { id: 9, name: 'Pocky  Sticks', price: '$4.99', seller: 'Karishma Arora', distance: '6.7 miles', image: poptartsImage },
-    { id: 10, name: 'Instant Noodles', price: '$2.75', seller: 'Kaylin Yeoh', distance: '7.1 miles', image: poptartsImage },
-    { id: 11, name: 'Almonds', price: '$1.50', seller: 'Marta Kowalska', distance: '12.1 miles', image: poptartsImage },
-    { id: 12, name: 'Frosted Flakes', price: 'FREE', seller: 'Kofi Osei', distance: '13.4 miles', image: poptartsImage },
-    { id: 13, name: 'Pasta', price: '$2.50', seller: 'Jason Li', distance: '15 miles', image: poptartsImage },
-    { id: 14, name: 'Salt', price:'$1.75', seller: 'Zola Tshabalala', distance: '20.5 miles', image: poptartsImage },
-    { id: 15, name: 'Diet Pepsi', price: 'FREE', seller: 'Nia Mensah', distance: '27 miles', image: poptartsImage }
+    { id: 1, name: 'Blueberry Poptarts', price: '$8.00', seller: 'Amina Farsi', distance: '0.6 miles', image: poptarts },
+    { id: 2, name: 'Bottled Water', price: 'FREE', seller: 'Kofi Osei', distance: '0.8 miles', image: bottledwater },
+    { id: 3, name: 'Granola Bars', price: '$3.30', seller: 'Fatima Sayed', distance: '1.3 miles', image: granolabars },
+    { id: 4, name: 'Orange Juice', price: '$2.00', seller: 'Pavan Kunigiri', distance: '1.7 miles', image: orangejuice },
+    { id: 5, name: 'Frozen Peas', price: '$1.99', seller: 'Santiago Torres', distance: '2.4 miles', image: frozenpeas },
+    { id: 7, name: 'Rice', price: 'FREE', seller: 'Kai Hoang', distance: '4.7 miles', image: rice },
+    { id: 8, name: 'Tomato Soup', price: '$3.65', seller: 'Luka Petrovic', distance: '6.6 miles', image: tomatosoup },
+    { id: 9, name: 'Pocky Sticks', price: '$4.99', seller: 'Karishma Arora', distance: '6.7 miles', image: pockysticks },
+    { id: 10, name: 'Instant Noodles', price: '$2.75', seller: 'Kaylin Yeoh', distance: '7.1 miles', image: instantnoodles },
+    { id: 11, name: 'Almonds', price: '$1.50', seller: 'Marta Kowalska', distance: '12.1 miles', image: almonds },
+    { id: 12, name: 'Frosted Flakes', price: 'FREE', seller: 'Kofi Osei', distance: '13.4 miles', image: frostedflakes },
+    { id: 13, name: 'Pasta', price: '$2.50', seller: 'Jason Li', distance: '15 miles', image: pasta },
+    { id: 14, name: 'Salt', price:'$1.75', seller: 'Zola Tshabalala', distance: '20.5 miles', image: salt },
+    { id: 15, name: 'Diet Pepsi', price: 'FREE', seller: 'Nia Mensah', distance: '27 miles', image: dietpepsi }
   ];
+
 
   return (
       <div className="marketplace">
@@ -46,7 +61,7 @@ function Market() {
                     <div className="seller-name">{item.seller}</div>
                     <div className="seller-distance">{item.distance} away</div>
                   </div>
-                  <button className="add-to-basket">+</button>
+                  <button className="add-to-basket" onClick={addToBasket}>+</button>
                 </div>
               </div>
             </div>

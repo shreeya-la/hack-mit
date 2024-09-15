@@ -14,17 +14,8 @@ function Account() {
             <p>617-857-7890</p>
             <a href="#bank">Linked Bank Account</a>
             <div className="edit-container">
-                <button className="edit-button">Edit Details</button>
+                <button className="edit-button">Edit Account Details</button>
             </div>
-            </div>
-            <div className="friends-list">
-                <h3>Friends</h3>
-                <ul>
-                    <li>Amina Farsi</li>
-                    <li>John Smith</li>
-                    <li>Santiago Torres</li>
-                </ul>
-                <button className="add-friends-button">Add Friends</button>
             </div>
         </div>
     );
