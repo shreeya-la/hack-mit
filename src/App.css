@@ -1,0 +1,166 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(250, 250, 250);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  width: 100%;
+  height: 90px;
+  margin: 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 15px;
+  background-color: #4c7747; 
+}
+
+.nav-buttons a {
+  color: white; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  text-decoration: underline; /* Underline text on hover */
+}
+
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filtered {
+  color: #7c7c7c; /* Light grey color */
+  font-style: italic; /* Italicized text */
+  font-size: 15px; /* Font size of 15 pixels */
+}
+
+
+.marketplace {
+  margin: 50px;
+  margin-top: 20px;
+}
+
+.market-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.market-column {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-size: 20px;
+}
+
+.item-price {
+  font-size: 16px;
+  color: gray;
+}
+
+.seller {
+  display: flex;
+  align-items: center;
+}
+
+.seller-details {
+  margin-right: 20px;
+}
+
+.seller-name {
+  font-weight: bold;
+}
+
+.seller-distance {
+  color: gray;
+}
+
+.add-to-basket {
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.add-to-basket:hover {
+  background-color: #f3f3f3;
+}
+
+@media (max-width: 768px) {
+  .market-column {
+    flex: 1 1 100%;
+  }
+
+  .market-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seller {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+}
