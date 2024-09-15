@@ -15,3 +15,6 @@
 
 ### What's next 
 #### - Given more time, we aim to streamline the registration process for sellers, including background checks, and explore direct connections with local food banks. Additionally, we plan to enhance both the backend infrastructure and the UI/UX design to create a more polished and user-friendly experience
+
+### More info
+#### - This Github only includes the source files for React, the other files were too big to include 
